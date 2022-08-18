@@ -69,7 +69,7 @@
         font-size: 1.15rem;
         line-height: 1.5;
         display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
         margin: 0
     }
 
@@ -650,6 +650,7 @@ FROM @XML.nodes(<span class="hljs-string">'/EnquiryParams'</span>) AS EnquiryPar
 CROSS APPLY EnquiryParams<span class="hljs-selector-class">.COL</span><span class="hljs-selector-class">.nodes</span>(<span class="hljs-string">'./enquiryProductDetails/EnquiryProductDetail'</span>) AS enquiryProductDetails(COL)
 CROSS APPLY enquiryProductDetails<span class="hljs-selector-class">.COL</span><span class="hljs-selector-class">.nodes</span>(<span class="hljs-string">'./supplierProductDetails/SupplierProductDetail'</span>) AS SupplierProductDetail(COL)
 </code></pre>
+    <p><img href="https://raw.githubusercontent.com/myNameArnav/jsonAndSQL/main/Screenshot%202022-08-18%20at%202.22.33%20PM.png"></p>
     <hr>
     <h2 id="json">JSON</h2>
     <h3 id="tip">Tip</h3>
@@ -694,7 +695,7 @@ CROSS APPLY enquiryProductDetails<span class="hljs-selector-class">.COL</span><s
 )
 </code></pre>
     <p>This gives us the table from JSON</p>
-
+    <p><img href="https://raw.githubusercontent.com/myNameArnav/jsonAndSQL/main/Screenshot%202022-08-18%20at%201.30.30%20PM.png"></p>
 </body>
 
 </html>
